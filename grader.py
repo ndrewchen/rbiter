@@ -28,9 +28,9 @@ def evaluate_latex(exp, mode='numeric', maxn=100):
     :param string exp: latex string of an expression
     :param string mode: mode to evaluate exp in
         - numeric = evaluate exp to a number
-        - symbolic = evaluate exp to the most simplified form
+        - symbolic = evaluate exp to a symbol
     :param int maxn: number of digits of precision to use during numerical evaluation
-    :return: Numerical evaluation of expression (if possible) or most simplified sympy expression
+    :return: sympy expression containing evaluated latex
     """
     if mode == 'numeric':
         try:
@@ -56,9 +56,10 @@ def comp_exp_latex(exp1, exp2, mode='numeric', maxn=100, suspicious_threshold=6,
     :param string exp2: latex string of second expression
     :param string mode: mode to evaluate expressions in
         - numeric = evaluate exp to a number
-        - symbolic = evaluate exp to the most simplified form
+        - symbolic = evaluate exp in symbolic form
     :param int maxn: number of digits of precision to use during numerical evaluation
-    :param int suspicious_threshold: number of consecutive digits necessary to mark as suspicious
+    :param int suspicious_threshold: inclusive threshold for number of consecutive digits necessary to mark as
+        suspicious
     :param float numeric_threshold: inclusive threshold for grading two numerically-evaluated expressions as equivalent
     :return:
         - 0 = not equivalent
