@@ -50,7 +50,7 @@ Required parameters:
 - `exp` (string): latex string of an expression
 
 Optional parameters:
-- `mode` (string)(default = `numeric`): mode of sympy evaluation to use. Available modes:
+- `mode` (string)(default = `symbolic`): mode of sympy evaluation to use. Available modes:
   - `numeric`: evaluate `exp` to a number
   - `symbolic`: evaluate `exp` to a symbol
 - `maxn` (int)(default = `100`): number of digits of precision to use during numerical evaluation
@@ -67,7 +67,7 @@ Required parameters:
 - `exp2` (string): latex string of an expression
 
 Optional parameters:
-- `mode` (string)(default = `numeric`): mode of sympy evaluation to use. Available modes:
+- `mode` (string)(default = `symbolic`): mode of sympy evaluation to use. Available modes:
   - `numeric`: evaluate `exp` to a number
   - `symbolic`: evaluate `exp` to a symbol
 - `maxn` (int)(default = `100`): number of digits of precision to use during numerical evaluation
@@ -89,7 +89,7 @@ Required parameters:
 - `exp_list` (List[string]): list of latex strings of expressions to compare to `exp`
 
 Optional parameters:
-- `mode` (string)(default = `numeric`): mode of sympy evaluation to use. Available modes:
+- `mode` (string)(default = `symbolic`): mode of sympy evaluation to use. Available modes:
   - `numeric`: evaluate `exp` to a number
   - `symbolic`: evaluate `exp` to a symbol
 - `exec_limit` (int)(default = `1`): limit of execution time per expression evaluation in seconds
@@ -118,7 +118,7 @@ Required parameters:
 - `destination` (string) : A1 notation of column to output graded results to (see https://developers.google.com/sheets/api/guides/concepts#expandable-1)
 
 Optional parameters:
-- `mode` (string)(default = `numeric`): mode of sympy evaluation to use. Available modes:
+- `mode` (string)(default = `symbolic`): mode of sympy evaluation to use. Available modes:
   - `numeric`: evaluate `exp` to a number
   - `symbolic`: evaluate `exp` to a symbol
 - `exec_limit` (int)(default = `1`): limit of execution time per expression evaluation in seconds

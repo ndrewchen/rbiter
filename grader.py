@@ -21,7 +21,7 @@ def time_limit(seconds):
         signal.alarm(0)
 
 
-def evaluate_latex(exp, mode='numeric', maxn=100):
+def evaluate_latex(exp, mode='symbolic', maxn=100):
     """
     Evaluates latex according to the mode
 
@@ -48,7 +48,7 @@ def evaluate_latex(exp, mode='numeric', maxn=100):
         raise LookupError('Invalid mode "' + mode + '". ')
 
 
-def comp_exp_latex(exp1, exp2, mode='numeric', maxn=100, suspicious_threshold=6, numeric_threshold=0):
+def comp_exp_latex(exp1, exp2, mode='symbolic', maxn=100, suspicious_threshold=6, numeric_threshold=0):
     """
     Compares a sympy expression to a latex string
 
@@ -95,7 +95,7 @@ def comp_exp_latex(exp1, exp2, mode='numeric', maxn=100, suspicious_threshold=6,
     # parse latex to sympy, evaluate sympy, compare results
 
 
-def comp_exp_list(exp, exp_list, mode='numeric', exec_limit=1, maxn=100, suspicious_threshold=6, numeric_threshold=0):
+def comp_exp_list(exp, exp_list, mode='symbolic', exec_limit=1, maxn=100, suspicious_threshold=6, numeric_threshold=0):
     """
     Compares an expression to a list of expressions
 
@@ -142,7 +142,7 @@ def comp_exp_list(exp, exp_list, mode='numeric', exec_limit=1, maxn=100, suspici
     return out
 
 
-def grade_column(sheet, sheet_id, correct, column, destination, mode='numeric', exec_limit=1, maxn=100,
+def grade_column(sheet, sheet_id, correct, column, destination, mode='symbolic', exec_limit=1, maxn=100,
                  suspicious_threshold=6, numeric_threshold=0):
     """
     Grades a column of latex answers by comparing them to the correct answer. ENSURE COLUMN AND DESTINATION DOES NOT
